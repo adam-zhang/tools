@@ -8,7 +8,7 @@ I use python as programming language in this project that can test my skill of p
 
 ## class_producer
 
-this tool provides a quick way to produce 2 file of a class which compatible on Windows or Linux.
+this tool provides a quick way to produce 2 files of a class which compatible on Windows or Linux.
 
 ### usage:
 
