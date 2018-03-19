@@ -31,7 +31,7 @@ def constructClass(className):
     constructHeadFile(className)
     constructCppFile(className)
 
-def constructHeadFile(subclass, parent):
+def constructInheritedHeadFile(subclass, parent):
     fileName = subclass + ".h"
     file = open(fileName, "w")
     file.write("#ifndef __" + subclass.upper() + "__H\n")
@@ -48,7 +48,7 @@ def constructHeadFile(subclass, parent):
     file.write("\n")
     file.write("#endif//__" + subclass.upper() + "__H\n")
 
-def constructCppFile(subclass, parent):
+def constructInheritedCppFile(subclass, parent):
     fileName = subclass + ".cpp"
     file = open(fileName, "w")
     file.write("#include \"" + subclass + "\"\n")
@@ -60,8 +60,8 @@ def constructCppFile(subclass, parent):
     file.write("{\n}\n")
 
 def constructInheritedClass(subclass, parent):
-    constructHeadFile(subclass, parent)
-    constructCppFile(subclass, parent)
+    constructInheritedHeadFile(subclass, parent)
+    constructInheritedCppFile(subclass, parent)
     
 def error():
     print "invalid arguemnts.\n"
@@ -69,7 +69,7 @@ def error():
 def main():
     if len(sys.argv) == 2 :
         constructClass(sys.argv[1])
-    if len(sys.argv) == 3:
+    elif len(sys.argv) == 3:
         constructInheritedClass(sys.argv[1], sys.argv[2])
     else:
         print error()
