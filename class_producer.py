@@ -44,7 +44,7 @@ def constructCppFile(className):
     file.write("\n\n")
     file.write(className + "::" + className + "()\n");
     file.write("{\n}\n\n");
-    file.write("~" + className + "::" + className + "()\n");
+    file.write( className + "::~" + className + "()\n");
     file.write("{\n}\n");
 
 
