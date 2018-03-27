@@ -20,6 +20,14 @@ import os
 #     file.write(content)
 #     file.write("*/")
 
+def qtClasses():
+    classes = [
+            "QWindow",
+           "QMainWindow",
+           "QObject"
+           ]
+    return classes
+
 
 
 def constructHeadFile(className):
