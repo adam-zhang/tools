@@ -1,6 +1,6 @@
 # Read Me First
 
-This project contains tools that I use in programming and accelerate speed of programming.
+This project contains tools that I use in programming to accelerate speed of programming.
 
 ## Programming language
 
